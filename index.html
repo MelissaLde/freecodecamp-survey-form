@@ -11,6 +11,185 @@
   </head>
 
   <body>
-    <h1>Je t'aime</h1>
+    <header>
+      <h1>Survey Form</h1>
+      <p>Thank you for taking the time to help us improve the platform</p>
+    </header>
+
+    <main>
+      <form>
+        <section>
+          <div>
+            <label for="name">Nom</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Entrez votre nom"
+            />
+          </div>
+
+          <div>
+            <label for="email">Email</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Entrez votre email"
+            />
+          </div>
+
+          <div>
+            <label for="age">Age</label>
+            <input
+              type="text"
+              name="age"
+              id="age"
+              placeholder="Entrez votre age"
+            />
+          </div>
+
+          <label for="role"
+            >Quelle option décrit le mieux votre role actuel ?</label
+          >
+          <div>
+            <select id="role" name="options">
+              <option value="#">Sélectionner le role actuel</option>
+              <option value="etudiant">Etudiant</option>
+              <option value="plein temps">Travail à temps plein</option>
+              <option value="apprendre">Apprenant à temps plein</option>
+              <option value="rien dire">Je préfère rien dire</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+        </section>
+
+        <section>
+          <p>Recommanderiez-vous Freecodecamp à un ami ?</p>
+          <div>
+            <label for="definitely">Absolument</label>
+            <input
+              type="radio"
+              id="definitely"
+              name="user-recommend"
+              value="Absolument"
+              checked
+            />
+          </div>
+
+          <div>
+            <label for="maybe">Peut-etre</label>
+            <input
+              type="radio"
+              id="maybe"
+              name="user-recommend"
+              value="Peut-etre"
+            />
+          </div>
+
+          <div>
+            <label for="no">Non</label>
+            <input type="radio" id="no" name="user-recommend" value="Non" />
+          </div>
+        </section>
+
+        <section>
+          <label for="prefered-feature"
+            >Quelle est votre fonctionnalité préférée de FreeCodeCamp ?</label
+          >
+          <div>
+            <select id="prefered-feature" name="prefered-feature">
+              <option value="#">Sélectionnez une option</option>
+              <option value="challenges">Challenges</option>
+              <option value="projets">Projets</option>
+              <option value="communauté">Communauté</option>
+              <option value="open source">Open Source</option>
+            </select>
+          </div>
+        </section>
+
+        <section>
+          <p>Que voudriez-vous voir amélioré ?</p>
+          <div>
+            <label for="front-end">Projets Front-end</label>
+            <input
+              type="checkbox"
+              id="front-end"
+              name="improvement-project"
+              checked
+            />
+          </div>
+
+          <div>
+            <label for="back-end">Projets Back-end</label>
+            <input type="checkbox" id="back-end" name="improvement-project" />
+          </div>
+
+          <div>
+            <label for="data">Data Visualisation</label>
+            <input type="checkbox" id="data" name="improvement-project" />
+          </div>
+
+          <div>
+            <label for="challenge">Challenges</label>
+            <input type="checkbox" id="challenge" name="improvement-project" />
+          </div>
+
+          <div>
+            <label for="open-source">Open Source Communauté</label>
+            <input
+              type="checkbox"
+              id="open-source"
+              name="improvement-project"
+            />
+          </div>
+
+          <div>
+            <label for="help-rooms">Salles d'Aide</label>
+            <input type="checkbox" id="help-rooms" name="improvement-project" />
+          </div>
+
+          <div>
+            <label for="video">Vidéos</label>
+            <input type="checkbox" id="video" name="improvement-project" />
+          </div>
+
+          <div>
+            <label for="meetups">Meetups</label>
+            <input type="checkbox" id="meetups" name="improvement-project" />
+          </div>
+
+          <div>
+            <label for="wiki">Wikipédia</label>
+            <input type="checkbox" id="wiki" name="improvement-project" />
+          </div>
+
+          <div>
+            <label for="forum">Forum</label>
+            <input type="checkbox" id="forum" name="improvement-project" />
+          </div>
+
+          <div>
+            <label for="courses">Courses supplémentaires</label>
+            <input type="checkbox" id="courses" name="improvement-project" />
+          </div>
+        </section>
+
+        <section>
+          <div>
+            <label for="suggestion">Autres commentaires ou suggestions ?</label>
+            <textarea
+              id="suggestion"
+              name="comment"
+              placeholder="Entrez votre message"
+            ></textarea>
+          </div>
+        </section>
+
+        <section>
+          <input type="submit" value="Envoyer formulaire" />
+        </section>
+      </form>
+    </main>
   </body>
 </html>
