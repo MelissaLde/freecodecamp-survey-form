@@ -5,55 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Survey Form</title>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <title>Survey Form</title>
   </head>
 
   <body>
     <header>
-      <h1>Survey Form</h1>
-      <p>Thank you for taking the time to help us improve the platform</p>
+      <h1 id="title">Survey Form</h1>
+      <p id="description">
+        Thank you for taking the time to help us improve the platform
+      </p>
     </header>
 
     <main>
-      <form>
+      <form id="survey-form">
         <section>
           <div>
-            <label for="name">Nom</label>
+            <label id="name-label" for="name">Nom</label>
             <input
               type="text"
               name="name"
               id="name"
               placeholder="Entrez votre nom"
+              required
             />
           </div>
 
           <div>
-            <label for="email">Email</label>
+            <label id="email-label" for="email">Email</label>
             <input
-              type="text"
+              type="email"
               name="email"
               id="email"
               placeholder="Entrez votre email"
+              required
             />
           </div>
 
           <div>
-            <label for="age">Age</label>
+            <label id="number-label" for="number">Age</label>
             <input
-              type="text"
+              type="number"
               name="age"
-              id="age"
+              id="number"
+              min="10"
+              max="99"
               placeholder="Entrez votre age"
             />
           </div>
 
-          <label for="role"
+          <label class="label-role" for="dropdown"
             >Quelle option décrit le mieux votre role actuel ?</label
           >
           <div>
-            <select id="role" name="options">
+            <select id="dropdown" name="options">
               <option value="#">Sélectionner le role actuel</option>
               <option value="etudiant">Etudiant</option>
               <option value="plein temps">Travail à temps plein</option>
@@ -65,9 +81,8 @@
         </section>
 
         <section>
-          <p>Recommanderiez-vous Freecodecamp à un ami ?</p>
+          <p class="p-question">Recommanderiez-vous Freecodecamp à un ami ?</p>
           <div>
-            <label for="definitely">Absolument</label>
             <input
               type="radio"
               id="definitely"
@@ -75,26 +90,27 @@
               value="Absolument"
               checked
             />
+            <label class="label-radio" for="definitely">Absolument</label>
           </div>
 
           <div>
-            <label for="maybe">Peut-etre</label>
             <input
               type="radio"
               id="maybe"
               name="user-recommend"
               value="Peut-etre"
             />
+            <label class="label-radio" for="maybe">Peut-etre</label>
           </div>
 
           <div>
-            <label for="no">Non</label>
             <input type="radio" id="no" name="user-recommend" value="Non" />
+            <label class="label-radio" for="no">Non</label>
           </div>
         </section>
 
         <section>
-          <label for="prefered-feature"
+          <label class="label-role" for="prefered-feature"
             >Quelle est votre fonctionnalité préférée de FreeCodeCamp ?</label
           >
           <div>
@@ -109,75 +125,132 @@
         </section>
 
         <section>
-          <p>Que voudriez-vous voir amélioré ?</p>
+          <p class="p-question">Que voudriez-vous voir amélioré ?</p>
           <div>
-            <label for="front-end">Projets Front-end</label>
             <input
               type="checkbox"
               id="front-end"
               name="improvement-project"
+              value="#"
               checked
             />
+            <label class="label-checkbox" for="front-end"
+              >Projets Front-end</label
+            >
           </div>
 
           <div>
-            <label for="back-end">Projets Back-end</label>
-            <input type="checkbox" id="back-end" name="improvement-project" />
+            <input
+              type="checkbox"
+              id="back-end"
+              name="improvement-project"
+              value="#"
+            />
+            <label class="label-checkbox" for="back-end"
+              >Projets Back-end</label
+            >
           </div>
 
           <div>
-            <label for="data">Data Visualisation</label>
-            <input type="checkbox" id="data" name="improvement-project" />
+            <input
+              type="checkbox"
+              id="data"
+              name="improvement-project"
+              value="#"
+            />
+            <label class="label-checkbox" for="data">Data Visualisation</label>
           </div>
 
           <div>
-            <label for="challenge">Challenges</label>
-            <input type="checkbox" id="challenge" name="improvement-project" />
+            <input
+              type="checkbox"
+              id="challenge"
+              name="improvement-project"
+              value="#"
+            />
+            <label class="label-checkbox" for="challenge">Challenges</label>
           </div>
 
           <div>
-            <label for="open-source">Open Source Communauté</label>
             <input
               type="checkbox"
               id="open-source"
               name="improvement-project"
+              value="#"
             />
+            <label class="label-checkbox" for="open-source"
+              >Open Source Communauté</label
+            >
           </div>
 
           <div>
-            <label for="help-rooms">Salles d'Aide</label>
-            <input type="checkbox" id="help-rooms" name="improvement-project" />
+            <input
+              type="checkbox"
+              id="help-rooms"
+              name="improvement-project"
+              value="#"
+            />
+            <label class="label-checkbox" for="help-rooms">Salles d'Aide</label>
           </div>
 
           <div>
-            <label for="video">Vidéos</label>
-            <input type="checkbox" id="video" name="improvement-project" />
+            <input
+              type="checkbox"
+              id="video"
+              name="improvement-project"
+              value="#"
+            />
+            <label class="label-checkbox" for="video">Vidéos</label>
           </div>
 
           <div>
-            <label for="meetups">Meetups</label>
-            <input type="checkbox" id="meetups" name="improvement-project" />
+            <input
+              type="checkbox"
+              id="meetups"
+              name="improvement-project"
+              value="#"
+            />
+            <label class="label-checkbox" for="meetups">Meetups</label>
           </div>
 
           <div>
-            <label for="wiki">Wikipédia</label>
-            <input type="checkbox" id="wiki" name="improvement-project" />
+            <input
+              type="checkbox"
+              id="wiki"
+              name="improvement-project"
+              value="#"
+            />
+            <label class="label-checkbox" for="wiki">Wikipédia</label>
           </div>
 
           <div>
-            <label for="forum">Forum</label>
-            <input type="checkbox" id="forum" name="improvement-project" />
+            <input
+              type="checkbox"
+              id="forum"
+              name="improvement-project"
+              value="#"
+            />
+            <label class="label-checkbox" for="forum">Forum</label>
           </div>
 
           <div>
-            <label for="courses">Courses supplémentaires</label>
-            <input type="checkbox" id="courses" name="improvement-project" />
+            <input
+              type="checkbox"
+              id="courses"
+              name="improvement-project"
+              value="#"
+            />
+            <label class="label-checkbox" for="courses"
+              >Courses supplémentaires</label
+            >
           </div>
         </section>
 
         <section>
-          <div>
-            <label for="suggestion">Autres commentaires ou suggestions ?</label>
+          <div id="div-textarea">
+            <label id="label-suggestion" for="suggestion"
+              >Autres commentaires ou suggestions ?</label
+            >
             <textarea
               id="suggestion"
               name="comment"
@@ -187,9 +260,11 @@
         </section>
 
         <section>
-          <input type="submit" value="Envoyer formulaire" />
+          <input id="submit" type="submit" value="Envoyer formulaire" />
         </section>
       </form>
     </main>
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 </html>
